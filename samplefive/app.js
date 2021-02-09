@@ -1,6 +1,5 @@
 let carousel = document.querySelectorAll('.carousel');
 let buttonSound = new sound("./Sounds/click.mp3");
-let ringSound = new sound("./Sounds/ring.mp3");
 let radius, theta, speed;
 
 
@@ -28,26 +27,25 @@ carousel.forEach((column)=>{
 
 let playButton = document.querySelector('.button');
 let active = false;
+let angle = 0;
 	
 playButton.addEventListener( 'click', () => {
 	buttonSound.play();
 	if(active == false){
 		active = true;
-		setTimeout(()=>{ringSound.play()},250);
 		let i = 0;
-		let speed = Math.ceil(Math.random() * 276 * Math.random());
-		console.log(speed)
+		let speed = Math.ceil(Math.random() * 180);
 		setInterval(()=>{
 			if(i < carousel.length){ 
-				let angle = 360 * (-speed);
-				carousel[i].style.transform = `translateZ(${-radius}px) rotateX(${angle-72}deg)`;
+				angle += speed * 30;
+				carousel[i].style.transform = `translateZ(${-radius}px) rotateX(${-angle}deg)`;
 				carousel[i].style.transition = "transform 4s ease-in-out"; 
 			}; 
 			i++;
 		},250);
 
 	};
-	carousel[carousel.length-1].addEventListener("transitionend", ()=>{setTimeout(()=>{active = false},1000)});
+	carousel[carousel.length-1].addEventListener("transitionend", ()=>{setTimeout(()=>{active = false},500)});
 });
 
 
@@ -56,7 +54,7 @@ let mute = document.querySelector(".mute");
 mute.addEventListener("click", ()=>{
 	let sound = document.getElementsByTagName("audio");
 	mute.classList.toggle("mute");
-	sound[1].muted ? sound[1].muted = false: sound[1].muted = true;	
+	sound[0].muted ? sound[0].muted = false: sound[0].muted = true;	
 })
 
 
@@ -81,26 +79,26 @@ function sound(src) {
 //****************************************** Coin effects ************************************//
 
 
-let j = 1;
-function coinmove(){
-	if(j == 21){j = 1};
-	let coin = document.getElementById(j/*`${Math.ceil(Math.random() * 20)}`*/);
-	coin.classList.add("coins");
-	coin.style.cssText = `left: ${Math.floor(Math.random() * screen.width * 0.9)}px`;
-	j++;
+// let j = 1;
+// function coinmove(){
+// 	if(j == 21){j = 1};
+// 	let coin = document.getElementById(j/*`${Math.ceil(Math.random() * 20)}`*/);
+// 	coin.classList.add("coins");
+// 	coin.style.cssText = `left: ${Math.floor(Math.random() * screen.width * 0.9)}px`;
+// 	j++;
 
-};
+// };
 
-setInterval(coinmove, 350);
+// setInterval(coinmove, 350);
 
-var windowWidth = window.innerWidth;
-var windowHeight = window.innerHeight;
+// var windowWidth = window.innerWidth;
+// var windowHeight = window.innerHeight;
 
-window.addEventListener('resize', getNewWindowSize);
+// window.addEventListener('resize', getNewWindowSize);
 
-function getNewWindowSize() {
-	if (windowWidth !== window.innerWidth || windowHeight !== window.innerHeight) {
-		location.reload();
-		return;
-	}
-}
+// function getNewWindowSize() {
+// 	if (windowWidth !== window.innerWidth || windowHeight !== window.innerHeight) {
+// 		location.reload();
+// 		return;
+// 	}
+// }
