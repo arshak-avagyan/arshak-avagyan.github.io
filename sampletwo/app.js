@@ -1,3 +1,4 @@
+alert("Don't use Safari browser for this game");
 let carousel = document.querySelectorAll('.carousel');
 let buttonSound = new sound("./Sounds/click.mp3");
 let radius, theta, speed;
