@@ -1,0 +1,55 @@
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.indicators {
+  margin-top: 30px;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  animation: blinking 3s linear infinite;
+}
+
+
+.indicatorcircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  animation: zooming 3s linear infinite;
+}
+
+@keyframes blinking {
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  
+}
+
+@keyframes zooming {
+  25%{
+    opacity: 0;
+  }
+  40% {
+    transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
