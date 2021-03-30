@@ -68,10 +68,10 @@ function changer() {
 			video[0].style.zIndex = '3';
 			video[0].style.display = 'initial';
 			video[0].play();
-			// video[0].addEventListener('ended', ()=>{
-			// 	i = 0; 
-			// 	video[0].style.display = 'none';
-			// })
+			video[0].addEventListener('ended', ()=>{
+				i = 0; 
+				video[0].style.display = 'none';
+			})
 		}
 		else {
 			changing[1].classList.toggle('zindex');
