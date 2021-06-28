@@ -20,8 +20,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	background-color: #000000;
-	/*background-color: #15141a;*/
+	background-color: #15141a;
 	min-width: 1270px;
 }
 
@@ -125,28 +124,13 @@ header {
 
 
 .intro {
+	/*top:  10%;*/
 	width: 100%;
-	position: relative;
-	background-color: #15141a;
-
-	/*margin-top: 90px;*/
-	/*height: 110vh;*/
-	/*background: url(./Images/bg1.png);
+	height: 100%;
+	background: url(./Images/bg1.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-*/}
-
-.group {
-	position: absolute;
-	/*bottom: -50px;*/
-	bottom: -5%;
-	/*z-index: -1;*/
-}
-
-.group img {
-	width: 100%;
-	/*margin-top: -150px;*/
 }
 
 .intro .container {
@@ -165,7 +149,6 @@ header {
 	margin-top: -100px;
 	width: 50%;
 	height: 70%;
-	z-index: 1;
 }
 
 .intro-content p {
@@ -186,16 +169,7 @@ header {
 	padding: 10px 25px;
 }
 
-.btnappstore {
-	margin: 30px 20px 30px 0px;
-	width: 158px;
-	height: 46px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-}
-.btnblue {
+.btna {
 	border-radius: 10px;
 	margin: 30px 20px 30px 0px;
 	width: 158px;
@@ -206,6 +180,7 @@ header {
 	justify-content: center;
 	cursor: pointer;
 }
+
 .appstore{
 	width: 100%;
 	height: 100%;
@@ -224,7 +199,6 @@ header {
 	align-items: center;
 	height: 100%;
 	width: 50%;
-	z-index: 1;
 }
 
 .intro-iphone img {
@@ -273,19 +247,14 @@ header {
 */
 
 .vision {
-	margin-top: -190px;
+	margin-top: -210px;
 	height: 100%;
 	width: 100%;
-	background-color: #000000;
-	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-	/*clip-path: polygon(0 185px, 100% 0, 100% 100%, 0 100%);*/
-
-/*	background: url(./Images/Rectangle_175.png);
+	/*background-color: #000000;*/
+	background: url(./Images/Rectangle_175.png);
 	background-size: cover;
-	background-repeat: no-repeat;*/
-	/*padding-top: 100px;*/
-	padding-top: 5%;
-	z-index: 1;
+	background-repeat: no-repeat;
+	padding-top: 100px;
 }
 
 .vision-title {
@@ -357,19 +326,16 @@ header {
 .boxing {
 	height: auto;
 	width: 100%;
-	clip-path: polygon(0 185px, 100% 0, 100% 100%, 0 100%);
-	background: #15141A;
-/*	background: url(./Images/Rectangle_178.png);
+	background: url(./Images/Rectangle_178.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: top;*/
-	margin-top: -190px;
+	background-position: top;
+	margin-top: -200px;
 	/*padding-top: 320px;*/
 	z-index: 20;
 }
 .boxing .container {
-	/*margin-top: 300px;*/
-	margin-top: 20%;
+	margin-top: 300px;
 	align-items: flex-start;
 }
 .boxing-content {
@@ -391,48 +357,32 @@ header {
 
 
 .leadership {
-	width: 100%;
 	background: black;
 	margin-top: -120px;
 	z-index: 31;
-	position: relative;
 }
 
 .leadership .container {
 	padding: 150px 0;
 }
 
-/*.line {
+.line {
 	margin-top: -70px;
 	z-index: 32;
 }
-.line img{
-	width: 100%;
-}*/
 
-.group2 {
-	/*position: absolute;*/
-	/*width: 100%;*/
-	/*bottom: -50%;*/
-	margin-top: -100px;
-	z-index: 31;
-}
-.group2 img {
+.line img{
 	width: 100%;
 }
 
 .contacts {
 	width: 100%;
-	/*margin-top: 10px;*/
-	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-	background: #15141A;
-	margin-top: -230px;
-	z-index: 31;
+	margin-top: 10px;
+
 }	
 
 .contacts-content {
 	width: 55%;
-	padding-top: 200px;
 	/*margin-top: 10px;*/
 }
 .contacts-content .btn {
@@ -455,8 +405,6 @@ header {
 footer {
 	width: 100%;
 	padding: 30px 0 30px 100px;
-	background-color: #15141a;
-
 }
 footer p{
 	font-size: 17px;
